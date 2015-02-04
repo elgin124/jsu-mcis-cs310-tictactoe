@@ -1,0 +1,18 @@
+displayBoard
+
+   |   |  
+-----------
+   |   |  
+-----------
+   |   |  
+
+updateBoard
+getXO
+main
+isValidPlay
+	getMove
+getComputerMove
+	isGameWon
+
+
+isRowWon
