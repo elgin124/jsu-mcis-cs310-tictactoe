@@ -36,7 +36,6 @@ public class TicTacToeBoardTest {
         System.out.println("reset");
         TicTacToeBoard instance = new TicTacToeBoard();
         instance.reset();
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -52,7 +51,6 @@ public class TicTacToeBoardTest {
 		String expResultS = Integer.toString(expResult);
 		String resultS = Integer.toString(result);
         assertEquals(expResultS, resultS);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
@@ -65,8 +63,7 @@ public class TicTacToeBoardTest {
         int player = 1;
         TicTacToeBoard instance = new TicTacToeBoard();
         instance.playAt(square, player);
-        // TODO review the generated test code and remove the default call to fail.
-        
+       
     }
 
     
@@ -78,13 +75,10 @@ public class TicTacToeBoardTest {
         int expResult = 0;
         int result = instance.isGameOver();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
-    /**
-     * Test of canPlayerWin method, of class TicTacToeBoard.
-     */
+    
     @Test
     public void testCanPlayerWin() 
 	{
@@ -94,37 +88,39 @@ public class TicTacToeBoardTest {
         String expResult = "";
         String result = instance.canPlayerWin(player);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
 
-    /**
-     * Test of getNextMove method, of class TicTacToeBoard.
-     */
+   
     @Test
     public void testGetNextMove() 
 	{
+		boolean b = false;
         System.out.println("getNextMove");
         TicTacToeBoard instance = new TicTacToeBoard();
         String expResult = "";
         String result = instance.getNextMove();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+        if ((result == "") && (expResult == "")){
+			b = true;
+		}
+		assertFalse(b);
+        
        
     }
 
-    /**
-     * Test of toString method, of class TicTacToeBoard.
-     */
+    
     @Test
     public void testToString() 
 	{
+		boolean b = false;
         System.out.println("toString");
         TicTacToeBoard instance = new TicTacToeBoard();
         String expResult = "";
         String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         if ((result == "") && (expResult == "")){
+			b = true;
+		}
+		assertFalse(b);
         
     }
     

@@ -32,15 +32,12 @@ public class TicTacToeTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class TicTacToe.
-     */
+  
     @Test
     public void testMain() {
         System.out.println("main");
         String[] args = null;
         TicTacToe.main(args);
-        // TODO review the generated test code and remove the default call to fail.
         
     }
     

@@ -18,10 +18,10 @@ public class TicTacToeGUI
 
 	public void TicTacToe()
 	{
-		// Set up the grid
+		
 		this.setSize(300,300);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    this.setTitle("Tic-Tac-Toe");
+	    this.setTitle("TicTacToe");
 		JPanel panel1 = new JPanel();
 	    panel1.setSize(300,300);
 	    panel1.setLayout(new GridLayout(3,3));
@@ -46,7 +46,7 @@ public class TicTacToeGUI
 	    this.add(panel1);
 	    this.setVisible(true);
 
-		// Start the game
+	
 		board = new TicTacToeBoard();
 
 	}
@@ -75,7 +75,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 3)
 		{
 			JOptionPane.showMessageDialog(null,
-				"It's a draw!", "Game Over",
+				"Draw!",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;
@@ -84,7 +84,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 1)
 		{
 			JOptionPane.showMessageDialog(null,
-				"You beat me!", "Game Over",
+				"You Won!",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;
@@ -127,7 +127,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 2)
 		{
 			JOptionPane.showMessageDialog(null,
-				"I beat you!", "Game Over",
+				"You lost",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;

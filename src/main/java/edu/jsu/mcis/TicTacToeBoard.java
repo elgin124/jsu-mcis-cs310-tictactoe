@@ -6,14 +6,14 @@ public class TicTacToeBoard
 
 	private int vectors [] [] =
 	    {
-		   {0, 1, 2},    // Row 1
-	       {3, 4, 5},    // Row 2
-	       {6, 7, 8},    // Row 3
-	       {0, 3, 6},    // Column 1
-	       {1, 4, 7},    // Column 2
-	       {2, 5, 8},    // Column 3
-	       {0, 4, 8},    // Diagonal 1
-	       {2, 4, 6}     // Diagonal 2
+		   {0, 1, 2},    
+	       {3, 4, 5},    
+	       {6, 7, 8},    
+	       {0, 3, 6},   
+	       {1, 4, 7},    
+	       {2, 5, 8},    
+	       {0, 4, 8},    
+	       {2, 4, 6}     
 	    };
 
 	public TicTacToeBoard()
@@ -129,26 +129,26 @@ public class TicTacToeBoard
 
 	public int isGameOver()
 	{
-		// check for win
+		
 		for (int v = 0; v < 8; v++)
 		{
 			int p = getVectorProduct(v);
 			if (p == 27)
-			    return 1;      // Player 1 has won
+			    return 1;      
 			if (p == 125)
-			    return 2;      // Player 2 has won
+			    return 2;      
 	    }
 
-	    // check for draw
+	    
 
 	    int blankCount = 0;
 	    for (int i = 0; i < 9; i++)
 	        if (board[i] == 2)
 	            blankCount++;
 	    if (blankCount == 0)
-	        return 3;          // Game is a draw
+	        return 3;          
 
-	    return 0;              // Game is not over
+	    return 0;              
 	}
 
 	public String canPlayerWin(int player)
@@ -187,21 +187,21 @@ public class TicTacToeBoard
 	{
 		String bestMove;
 
-		// Win if possible
+		
 		bestMove = this.canPlayerWin(2);
 		if (bestMove != "")
 		    return bestMove;
 
-		// Block if necessary
+		
 		bestMove = this.canPlayerWin(1);
 		if (bestMove != "")
 		    return bestMove;
 
-		// Center if it is open
+		
 		if (board[4] == 2)
 		    return "B2";
 
-		// First open corner
+		
 		if (board[0] == 2)
 		    return "A1";
 		if (board[2] == 2)
@@ -211,7 +211,7 @@ public class TicTacToeBoard
 		if (board[8] == 2)
 		    return "C3";
 
-		// First open edge
+		
 		if (board[1] == 2)
 		    return "A2";
 		if (board[3] == 2)
@@ -221,7 +221,7 @@ public class TicTacToeBoard
 		if (board[7] == 2)
 		    return "C2";
 
-		return "";          // The board is full
+		return "";         
 	}
 
     public String toString()

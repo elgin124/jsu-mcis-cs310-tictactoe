@@ -1,18 +1,10 @@
-displayBoard
-
-   |   |  
------------
-   |   |  
------------
-   |   |  
-
-updateBoard
-getXO
-main
-isValidPlay
-	getMove
-getComputerMove
-	isGameWon
-
-
-isRowWon
+canPlayerWin
+getNextMove
+reset
+
+toString
+isGameOver
+getSquare
+playAt
+
+	main

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.jsu.mcis.TicTacToeBoardTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-02-05T03:56:20" hostname="June-PC" time="0.031">
+  <properties/>
+  <testcase name="testCanPlayerWin" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.031"/>
+  <testcase name="testGetNextMove" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <testcase name="testReset" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <testcase name="testToString" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <testcase name="testIsGameOver" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <testcase name="testGetSquare" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <testcase name="testPlayAt" classname="edu.jsu.mcis.TicTacToeBoardTest" time="0.0"/>
+  <system-out><![CDATA[canPlayerWin
+getNextMove
+reset
+toString
+isGameOver
+getSquare
+playAt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
