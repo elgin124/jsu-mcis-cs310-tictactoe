@@ -36,9 +36,9 @@ public class TicTacToeBoard
 
 	public int getSquare(String square)
 	{
-		int index = mapSquareToIndex(square);
-		if (index == -1)
-			throw new IllegalArgumentException("Invalid square");
+			int index = mapSquareToIndex(square);
+				if (index == -1)
+					throw new IllegalArgumentException("Invalid square");
 		switch (getSquare(index))
 		{
 			case 3:
@@ -107,24 +107,24 @@ public class TicTacToeBoard
 
 	public void playAt(String square, int player)
 	{
-		int index = mapSquareToIndex(square);
-		if (index == -1)
-			throw new IllegalArgumentException("Invalid square");
-		this.playAt(index, player);
+			int index = mapSquareToIndex(square);
+				if (index == -1)
+				throw new IllegalArgumentException("Invalid square");
+				this.playAt(index, player);
 	}
 
 	private void playAt(int index, int player)
 	{
 		if (index < 0 | index > 8)
-		    throw new IllegalArgumentException("Square must be 0-8");
+				throw new IllegalArgumentException("Square must be 0-8");
 		if (player <1 | player > 2)
-			throw new IllegalArgumentException("Player must be 1 or 2");
+				throw new IllegalArgumentException("Player must be 1 or 2");
 		if (board[index] != 2)
-			throw new IllegalArgumentException("Square is not empty.");
+				throw new IllegalArgumentException("Square is not empty.");
 		if (player == 1)
-			board[index] = 3;
+				board[index] = 3;
 		else
-			board[index] = 5;
+				board[index] = 5;
 	}
 
 	public int isGameOver()
@@ -160,16 +160,16 @@ public class TicTacToeBoard
 
 		for (int v = 0; v < 8; v++)
 		{
-			int p = getVectorProduct(v);
-			if (   (player == 1 & p == 18)
-			     | (player == 2 & p == 50) )
+				int p = getVectorProduct(v);
+				if (   (player == 1 & p == 18)
+					| (player == 2 & p == 50) )
 			{
-				if (board[vectors[v][0]] == 2)
-				    return mapIndexToSquare(vectors[v][0]);
-				if (board[vectors[v][1]] == 2)
-				    return mapIndexToSquare(vectors[v][1]);
-				if (board[vectors[v][2]] == 2)
-				    return mapIndexToSquare(vectors[v][2]);
+					if (board[vectors[v][0]] == 2)
+						return mapIndexToSquare(vectors[v][0]);
+					if (board[vectors[v][1]] == 2)
+						return mapIndexToSquare(vectors[v][1]);
+					if (board[vectors[v][2]] == 2)
+						return mapIndexToSquare(vectors[v][2]);
 		    }
 		}
 		return "";

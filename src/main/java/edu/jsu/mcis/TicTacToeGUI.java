@@ -16,14 +16,14 @@ public class TicTacToeGUI
 
 	private TicTacToeBoard board;
 
-	public void TicTacToe()
+	public TicTacToeGUI()
 	{
 		
-		this.setSize(300,300);
+		this.setSize(250,250);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    this.setTitle("TicTacToe");
 		JPanel panel1 = new JPanel();
-	    panel1.setSize(300,300);
+	    panel1.setSize(250,250);
 	    panel1.setLayout(new GridLayout(3,3));
 	    btnA1 = createButton("A1");
 	    btnA2 = createButton("A2");
@@ -46,7 +46,7 @@ public class TicTacToeGUI
 	    this.add(panel1);
 	    this.setVisible(true);
 
-	
+		// Start the game
 		board = new TicTacToeBoard();
 
 	}
@@ -54,8 +54,8 @@ public class TicTacToeGUI
 	private JButton createButton(String square)
 	{
 		JButton btn = new JButton();
-		btn.setPreferredSize(new Dimension(50, 50));
-		Font f = new Font("Dialog", Font.PLAIN, 72);
+		btn.setPreferredSize(new Dimension(40, 40));
+		Font f = new Font("Dialog", Font.PLAIN, 62);
 		btn.setFont(f);
 		btn.addActionListener(e -> btnClick(e, square));
 		return btn;
@@ -75,7 +75,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 3)
 		{
 			JOptionPane.showMessageDialog(null,
-				"Draw!",
+				"It's a draw!", "Game Over",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;
@@ -84,7 +84,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 1)
 		{
 			JOptionPane.showMessageDialog(null,
-				"You Won!",
+				"You beat me!", "Game Over",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;
@@ -127,7 +127,7 @@ public class TicTacToeGUI
 		if (board.isGameOver() == 2)
 		{
 			JOptionPane.showMessageDialog(null,
-				"You lost",
+				"I beat you!", "Game Over",
 				JOptionPane.INFORMATION_MESSAGE);
 			resetGame();
 			return;

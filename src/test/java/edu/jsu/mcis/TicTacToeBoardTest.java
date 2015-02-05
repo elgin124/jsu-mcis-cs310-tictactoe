@@ -44,13 +44,13 @@ public class TicTacToeBoardTest {
     public void testGetSquare() 
 	{
         System.out.println("getSquare");
-        String square = "B1";
-        TicTacToeBoard instance = new TicTacToeBoard();
-        int expResult = 0;
-        int result = instance.getSquare(square);
+			String square = "B1";
+				TicTacToeBoard instance = new TicTacToeBoard();
+				int expResult = 0;
+				int result = instance.getSquare(square);
 		String expResultS = Integer.toString(expResult);
-		String resultS = Integer.toString(result);
-        assertEquals(expResultS, resultS);
+			String resultS = Integer.toString(result);
+				assertEquals(expResultS, resultS);
         
     }
 
@@ -58,11 +58,11 @@ public class TicTacToeBoardTest {
     @Test
     public void testPlayAt() 
 	{
-        System.out.println("playAt");
-        String square = "B2";
-        int player = 1;
-        TicTacToeBoard instance = new TicTacToeBoard();
-        instance.playAt(square, player);
+		System.out.println("playAt");
+			String square = "B2";
+				int player = 1;
+			TicTacToeBoard instance = new TicTacToeBoard();
+				instance.playAt(square, player);
        
     }
 
@@ -71,10 +71,10 @@ public class TicTacToeBoardTest {
     public void testIsGameOver() 
 	{
         System.out.println("isGameOver");
-        TicTacToeBoard instance = new TicTacToeBoard();
-        int expResult = 0;
-        int result = instance.isGameOver();
-        assertEquals(expResult, result);
+			TicTacToeBoard instance = new TicTacToeBoard();
+				int expResult = 0;
+				int result = instance.isGameOver();
+				assertEquals(expResult, result);
         
     }
 
@@ -83,11 +83,11 @@ public class TicTacToeBoardTest {
     public void testCanPlayerWin() 
 	{
         System.out.println("canPlayerWin");
-        int player = 1;
-        TicTacToeBoard instance = new TicTacToeBoard();
-        String expResult = "";
-        String result = instance.canPlayerWin(player);
-        assertEquals(expResult, result);
+			int player = 1;
+				TicTacToeBoard instance = new TicTacToeBoard();
+			String expResult = "";
+				String result = instance.canPlayerWin(player);
+				assertEquals(expResult, result);
         
     }
 
@@ -96,12 +96,12 @@ public class TicTacToeBoardTest {
     public void testGetNextMove() 
 	{
 		boolean b = false;
-        System.out.println("getNextMove");
-        TicTacToeBoard instance = new TicTacToeBoard();
-        String expResult = "";
-        String result = instance.getNextMove();
-        if ((result == "") && (expResult == "")){
-			b = true;
+			System.out.println("getNextMove");
+				TicTacToeBoard instance = new TicTacToeBoard();
+			String expResult = "";
+				String result = instance.getNextMove();
+				if ((result == "") && (expResult == "")){
+				b = true;
 		}
 		assertFalse(b);
         
@@ -113,11 +113,11 @@ public class TicTacToeBoardTest {
     public void testToString() 
 	{
 		boolean b = false;
-        System.out.println("toString");
-        TicTacToeBoard instance = new TicTacToeBoard();
-        String expResult = "";
-        String result = instance.toString();
-         if ((result == "") && (expResult == "")){
+			System.out.println("toString");
+				TicTacToeBoard instance = new TicTacToeBoard();
+			String expResult = "";
+				String result = instance.toString();
+			if ((result == "") && (expResult == "")){
 			b = true;
 		}
 		assertFalse(b);
